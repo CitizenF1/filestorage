@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>FILE MANAGER</title>
+</head>
+
+<body>
+	<h1>FILE MANAGER</h1>
+	<div>
+		<button onclick="goBack()">BACK</button>
+	</div>
+	<div>
+		<input id="folderName" type="text"></input>
+		<button onclick="newFolder()">NEW FOLDER</button>
+	</div>
+	<h1 id="currentPath"></h1>
+	<div id="content"></div>
+	<div id="drop-area">
+		<form class="my-form">
+			<p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+			<input type="file" id="fileElem" multiple onchange="handleFiles(this.files)">
+			<label class="button" for="fileElem">Select some files</label>
+		</form>
+	</div>
+
+	<script src="script.js"></script>
+	<script src="upload.js"></script>
+</body>
+
+</html>
